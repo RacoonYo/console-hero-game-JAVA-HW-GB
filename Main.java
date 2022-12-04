@@ -1,13 +1,8 @@
+
 public class Main {
     public static void main(String[] args) {
-        Rogue rogue1 = new Rogue("Rick");
-        Warrior warrior1 = new Warrior("Rob");
-        rogue1.hello();
-        warrior1.hello();
-        rogue1.evasion();
-        rogue1.evasion();
-        rogue1.evasion();
-        warrior1.raiseShield();
-        warrior1.attack(rogue1);
+        CreateSortList createSortList = new CreateSortList(56, 85, 65.6, 65.4, 28);
+
+        System.out.println(createSortList.getList());
     }
 }
