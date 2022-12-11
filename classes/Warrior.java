@@ -31,6 +31,7 @@ public class Warrior extends BaseHero implements Attack {
         System.out.println("shield raised");
         }
 
+    @Override
     public void attack(BaseHero hero) {
         hero.currentHP = hero.currentHP - hero.damageDoneToMe(this.damage);
         if(hero.currentHP <= 0) System.out.println(hero.name + "is DEAD");
