@@ -4,29 +4,31 @@ import checks.IsNumber;
 import java.util.Scanner;
 
 public class InPut {
-    Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
+    static LoggerCalc loggerCalc = new LoggerCalc();
 
-    String inPut (String text) {
+    static String inPut (String text) {
         System.out.println(text);
-        return scanner.next();
+        String input = scanner.next();
+        loggerCalc.getLogger().info(text + " // " + input);
+        return input;
     }
 
-    String inPutOperation(String text) {
+    static String inPutOperation(String text) {
         while (true) {
             String op = new InPut().inPut(text);
+            loggerCalc.getLogger().info(text + " // " + op);
             if (new IsCorrectOperator().isCorrectOperator(op)) return op;
         }
     }
 
-    OperandRational inPutOperand(String text) {
+    static OperandRational inPutOperand(String text) {
         while (true) {
             String num1 = new InPut().inPut(text);
+            loggerCalc.getLogger().info(text + " // " + num1);
             if (new IsNumber().isDouble(num1)) {
                 return new OperandRational(Double.valueOf(num1));
             }
         }
     }
-
-
-
 }

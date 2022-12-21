@@ -10,16 +10,16 @@ public class CalculationRational {
         this.operator = operator;
 
         switch (operator.value()) {
-            case "+" -> add(new InPut().inPutOperand("Введите первое число"),
-                            new InPut().inPutOperand("Введите второе число"));
-            case "-" -> subtraction(new InPut().inPutOperand("Введите первое число"),
-                                    new InPut().inPutOperand("Введите второе число"));
-            case "*" -> multiplication(new InPut().inPutOperand("Введите первое число"),
-                                        new InPut().inPutOperand("Введите второе число"));
-            case "/" -> division(new InPut().inPutOperand("Введите первое число"),
-                                    new InPut().inPutOperand("Введите второе число"));
-            case "**" -> degree(new InPut().inPutOperand("Введите число"),
-                    new InPut().inPutOperand("Введите степень"));
+            case "+" -> add(InPut.inPutOperand("Введите первое число"),
+                           InPut.inPutOperand("Введите второе число"));
+            case "-" -> subtraction(InPut.inPutOperand("Введите первое число"),
+                                    InPut.inPutOperand("Введите второе число"));
+            case "*" -> multiplication(InPut.inPutOperand("Введите первое число"),
+                                        InPut.inPutOperand("Введите второе число"));
+            case "/" -> division(InPut.inPutOperand("Введите первое число"),
+                                    InPut.inPutOperand("Введите второе число"));
+            case "**" -> degree(InPut.inPutOperand("Введите число"),
+                    InPut.inPutOperand("Введите степень"));
         }
     }
 
