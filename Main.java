@@ -1,13 +1,17 @@
+import java.util.logging.*;
+
+/**
+ * Создать калькулятор для работы с рациональными
+ * и комплексными числами, организовать меню, добавив в неё систему логирования.
+ *
+ * 1. getInput (num1, num2)
+ * 2. getOperation()
+ * 3. calc(nim1, num2, oper)
+ * 4. printResult()
+ */
+
 public class Main {
     public static void main(String[] args) {
-        Rogue rogue1 = new Rogue("Rick");
-        Warrior warrior1 = new Warrior("Rob");
-        rogue1.hello();
-        warrior1.hello();
-        rogue1.evasion();
-        rogue1.evasion();
-        rogue1.evasion();
-        warrior1.raiseShield();
-        warrior1.attack(rogue1);
+        new Controller().clickButton();
     }
 }
